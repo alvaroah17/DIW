@@ -1,8 +1,43 @@
 // _tarjeta-planta.scss — ✍️ B1 · la tarjeta de una planta en BEM
-//
 // Mira _boton.scss (👀): así es un bloque BEM con sus modificadores.
 // ✍️ B1. Primero las clases en index.html (las 6 <article> de .destacados), después su estilo aquí:
 //    - el bloque .tarjeta-planta y sus elementos (__imagen, __nombre, __descripcion, __precio, __boton, __etiqueta);
 //    - los modificadores --oferta (que se note) y --agotada (la imagen en gris);
 //    - especificidad plana: una clase por selector (o .tarjeta-planta--mod .tarjeta-planta__elem). Sin etiquetas ni ids.
 @use "../tokens" as *;
+
+.tarjeta-planta {
+  padding: $space-lg;
+  border-radius: $radius-md;
+  background: var(--color-superficie);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-planta__descripcion {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tarjeta-planta__precio {
+  font-weight: bold;
+  text-align: center;
+}
+
+.tarjeta-planta__nombre {
+  text-align: center;
+}
+
+.tarjeta-planta__etiqueta {
+  font-weight: bold;
+  text-decoration: underline $night-900;
+  text-align: center;
+}
+
+.tarjeta-planta--oferta .tarjeta-planta__etiqueta {
+  border: solid 5px var(--color-acento);
+}
+
+.tarjeta-planta--agotada .tarjeta-planta__imagen {
+  filter: grayscale(0.8);
+}

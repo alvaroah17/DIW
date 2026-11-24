@@ -12,26 +12,26 @@
   background: var(--color-superficie);
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .tarjeta-planta__descripcion {
   flex-grow: 1;
-  text-align: center;
 }
 
 .tarjeta-planta__precio {
   font-weight: bold;
-  text-align: center;
 }
 
 .tarjeta-planta__nombre {
-  text-align: center;
 }
 
 .tarjeta-planta__etiqueta {
   font-weight: bold;
-  text-decoration: underline $night-900;
-  text-align: center;
+  text-decoration: underline;
+  padding:10px;
+  text-decoration-color: var(--color-texto); 
+  align-self: center;
 }
 
 .tarjeta-planta--oferta .tarjeta-planta__etiqueta {
